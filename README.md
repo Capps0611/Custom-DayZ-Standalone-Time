@@ -13,12 +13,13 @@ With the release of DayZ Standalone there have been some requests out there to e
    int startHour = 10;   
    int stopHour = 16; 
  ```
- 5. Next inside of the **void main()** at the very bottom, you will want to add
+ 5. To configure the script you will want to adjust the **startHour** and **stopHour**. To get an idea, **0 is 12:00am and 23 is 11:00pm**
+ 6. Next inside of the **void main()** at the very bottom, you will want to add
   ```c
   cappsTimeLoop(startHour,stopHour,true);
   ```
- 6. Next scoll down to just underneath **override void StartingEquipSetup()** inside of the **class CustomMission: MissionServer:**
- 7. You are going to add the following code:
+ 7. Next scoll down to just underneath **override void StartingEquipSetup()** inside of the **class CustomMission: MissionServer:**
+ 8. You are going to add the following code:
  
  ```c
  override void TickScheduler (float timeSplice)
