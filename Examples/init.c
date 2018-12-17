@@ -1,6 +1,6 @@
 #include "$CurrentDir:\\mpmissions\\dayzOffline.chernarusplus\\Scripts\\cappsTimeLoop.c"
-int startHour = 10;
-int stopHour = 16;
+ int setStartHour = 10;   
+ int setStopHour = 16; 
 void main()
 {
 	//INIT WEATHER BEFORE ECONOMY INIT------------------------
@@ -34,7 +34,7 @@ void main()
 		GetGame().GetWorld().SetDate(year, month, day, hour, minute);
 	}
 	//sets the time correctly and marks the first run of the script!
-	cappsTimeLoop(startHour,stopHour,true);
+	cappsTimeLoop(setStartHour,setStopHour,true);
 }
 
 class CustomMission: MissionServer
@@ -135,7 +135,7 @@ class CustomMission: MissionServer
 		if (currentTime >= newTime + timeDelay)
 		{
 			//GetGame().ChatPlayer(1,"3 minute check on reset!");//for debug pruposes
-			cappsTimeLoop(startHour,stopHour,false);
+			cappsTimeLoop(setStartHour,setStopHour,false);
 			//GetGame().ChatPlayer(1,"Passed the time switch call");//for debug pruposes
 			newTime = currentTime;
 		}
