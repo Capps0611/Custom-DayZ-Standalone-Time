@@ -10,13 +10,13 @@ With the release of DayZ Standalone there have been some requests out there to e
   4. At the top of the Init.c file add directly above **void main()** 
   ```c
    #include "$CurrentDir:\\mpmissions\\dayzOffline.chernarusplus\\Scripts\\cappsTimeLoop.c"  
-   int startHour = 10;   
-   int stopHour = 16; 
+   int setStartHour = 10;   
+   int setStopHour = 16; 
  ```
  5. To configure the script you will want to adjust the **startHour** and **stopHour**. To get an idea, **0 is 12:00am and 23 is 11:00pm**
  6. Next inside of the **void main()** at the very bottom, you will want to add
   ```c
-  cappsTimeLoop(startHour,stopHour,true);
+  cappsTimeLoop(setStartHour,setStopHour,true);
   ```
  7. Next scoll down to just underneath **override void StartingEquipSetup()** inside of the **class CustomMission: MissionServer:**
  8. You are going to add the following code:
@@ -46,7 +46,7 @@ With the release of DayZ Standalone there have been some requests out there to e
 		if (currentTime >= newTime + timeDelay)
 		{
 			//GetGame().ChatPlayer(1,"3 minute check on reset!");//for debug pruposes
-			cappsTimeLoop(startHour,stopHour,false);
+			cappsTimeLoop(setStartHour,setStopHour,false);
 			//GetGame().ChatPlayer(1,"Passed the time switch call");//for debug pruposes
 			newTime = currentTime;
 		}
