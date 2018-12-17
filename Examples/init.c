@@ -1,6 +1,6 @@
 #include "$CurrentDir:\\mpmissions\\dayzOffline.chernarusplus\\Scripts\\cappsTimeLoop.c"
- int setStartHour = 10;   
- int setStopHour = 16; 
+int setStartHour = 10;   
+int setStopHour = 16; 
 void main()
 {
 	//INIT WEATHER BEFORE ECONOMY INIT------------------------
