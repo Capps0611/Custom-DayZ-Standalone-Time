@@ -18,7 +18,7 @@ With the release of DayZ Standalone there have been some requests out there to e
   ```c
   cappsTimeLoop(setStartHour,setStopHour,true);
   ```
- 7. Next scoll down to just underneath **override void StartingEquipSetup()** inside of the **class CustomMission: MissionServer:**
+ 7. Next scoll down to just underneath **override void StartingEquipSetup(PlayerBase player, bool clothesChosen)** inside of the **class CustomMission: MissionServer:**
  8. You are going to add the following code:
  
  ```c
