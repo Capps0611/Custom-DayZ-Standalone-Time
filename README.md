@@ -4,7 +4,7 @@
 With the release of DayZ Standalone there have been some requests out there to enable server owners to keep the time of day on their server set to certain point. For example some may want their server to always remain in daylight and others might want eternal darkness. So with that, I've gone ahead and written a small server side script to do just that! Lets dive right into it!
 
 # Installation
-  1. Download a copy of the **"Scripts"** folder from [GitHub](https://github.com/Capps0611/Custom-DayZ-Standalone-Time/releases/download/v0.0.1/Scripts.zip)
+  1. Download a copy of the **"Scripts"** folder from [GitHub](https://github.com/Capps0611/Custom-DayZ-Standalone-Time/releases/download/0.0.2/Scripts.zip
   2. Exact the **"Scripts"** folder into your **MPMissions\dayzOffline.chernarusplus directory**
   3. Open your Init.c file
   4. At the top of the Init.c file add directly above **void main()** 
