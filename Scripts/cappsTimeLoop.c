@@ -20,7 +20,7 @@ void cappsTimeLoop(int startHour, int stopHour, bool firstRun)
 	if (firstRun == true)
 	{
 		GetGame().GetWorld().SetDate(year, month, day, startHour, minute); //sets time back to start hour
-	    GetGame().ChatPlayer(1,"A New day has begun, today is: "+month.ToString()+"/"+day.ToString()+"/"+year.ToString());
+	    GetGame().ChatPlayer("A New day has begun, today is: "+month.ToString()+"/"+day.ToString()+"/"+year.ToString());
 	}
 	else if (hour >= stopHour)
   	{
@@ -45,6 +45,6 @@ void cappsTimeLoop(int startHour, int stopHour, bool firstRun)
 	    }
 	    //GetGame().ChatPlayer(1,"Triggering Time Switch"); //for debug purposes
 	    GetGame().GetWorld().SetDate(year, month, day, startHour, minute); //sets time back to start hour
-	    GetGame().ChatPlayer(1,"A New day has begun, today is: "+month.ToString()+"/"+day.ToString()+"/"+year.ToString());
+	    GetGame().ChatPlayer("A New day has begun, today is: "+month.ToString()+"/"+day.ToString()+"/"+year.ToString());
   	}
 }
